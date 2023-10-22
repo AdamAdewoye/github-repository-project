@@ -1,5 +1,6 @@
 import styles from "./ListedRepos.module.css";
 import CardRepo from "../CardRepo/CardRepo";
+import { Pagination } from "@mui/material";
 import useFetch from "../../useFetch/useFetch";
 import { useState } from "react";
 import Loader from "../loader/loader";
