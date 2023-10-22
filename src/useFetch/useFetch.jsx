@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import { axiosRequest } from "../helpers/axiosRequest";
+//import { axiosRequest } from "../helpers/axiosRequest";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const useFetch = (url) => {
           setData(data);
         }
       } catch (error) {
-        if (error.response.status === 404) {
+        if (error.response === 404) {
           navigate("/*");
         } else {
           setError(true);
