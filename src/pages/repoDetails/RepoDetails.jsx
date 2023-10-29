@@ -1,54 +1,73 @@
 // import React from 'react'
+import { useEffect } from "react";
+import styles from "./Repodetails.module.css";
+import { useParams } from 'react-router-dom';
 import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary'
+import useFetch from '../../useFetch/useFetch';
+
 
 const RepoDetails = () => {
-  return (
+    const { id } = useParams();
+
+    const { data, isLoading, error } = useFetch(`https://api.github.com/repos/adamadewoye/${id}`);
+    // console.log(data)
+    // if (isLoading) return <Spinner />;
+    if (error) return <ErrorBoundary />;
+  
+    return (
     <ErrorBoundary>
-    <div>Single Repo
+    <div>
             {
             
-            /* <div className="single">
- 
-             <div className="single__header">
-                   
-                <div     >
-
-                    <img src={avatar_url} className={styles.img}/>
-                    <p>{login}</p>
-                </div>
-                <div className={styles.time}><p><Clock/></p><p>{format(updated_at)}</p></div>
-                 
-             </div>
-             <div className="single__body">
-
-                        <p className="single__name">{description ?<p>{description}</p>:<p>{name} project</p>}</p>
-                        
-                        
-                        <p className="single__socials">
-                                <BiGitRepoForked className='single__icons'/>:
-                                <p>{forks}</p>
-
-                                
-                            </p>
-                            <p>
-                            <p className="single__socials">
-                                <Link className='single__icons'/>
-
-                                <NavLink to={html_url} className="single__link">{html_url} </NavLink>
-                            </p>
-
-                        </p>
-                        {language === "JavaScript"?
-                        <>
-                        <p><Language/>Html and css</p>
-                        <p><Language/>{language}</p>
-                        </>
-                        :language && <p><Language/>{language}</p>}
-                        {!language && <p><Language/> programmer</p> }
-                       
-
-                    </div>
-            </div> */}
+            <main className={styles.container}>
+      <div className={styles.heading}>
+        <h1>{data?.name} repository</h1>
+        <p>
+          {data?.description
+            ? data?.description
+            : `A ${data?.name} project created and version contolled by Github`}
+        </p>
+        <span>
+          Checkout the repository on Github{" "}
+          <a
+            href={data?.html_url}
+            target="blank"
+            title="Visit repo on Github"
+            rel="noopener noreferrer"
+          >
+            Here
+          </a>
+        </span>
+      </div>
+      <div className={styles.detailsBox}>
+        <h3>Other Repository Details</h3>
+        <ul>
+          <li>
+            <span>Main owner</span>: {data?.owner?.login}
+          </li>
+          <li>
+            <span>Created date</span>: {data?.created_at}
+          </li>
+          <li>
+            <span>Project main language</span>: {data?.language}
+          </li>
+          <li>
+            <span>Project live url</span>:{" "}
+            {data?.homepage ? (
+              <a href={data?.homepage} target="blank">
+                {data?.homepage}
+              </a>
+            ) : (
+              <span className={styles.noUrl}>No live url</span>
+            )}
+          </li>
+          <li>
+            <span>Last Updated</span>:{data?.updated_at}
+          </li>
+        </ul>
+      </div>
+    </main>
+     }
         </div>
     </ErrorBoundary>
   )
