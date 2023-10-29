@@ -1,6 +1,6 @@
 // import React from 'react'
 import { useEffect } from "react";
-import styles from './Repodetails.module.css';
+import styles from './RepoDetails.module.css';
 import { useParams } from 'react-router-dom';
 import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary'
 import useFetch from '../../useFetch/useFetch';
