@@ -1,8 +1,43 @@
-# React + Vite
+# Altschool Africa School of Engineering Second Semester Exam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## GitHub Portfolio Viewer
 
-Currently, two official plugins are available:
+!REPOSITORY PICTURE HERE
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is developed for the Altschool Africa School of Engineering Second Semester Exam. It's a React web application that fetches and displays your GitHub repositories. It features a list of all repositories, detailed views of individual repositories, and it implements an Error Boundary to gracefully handle errors. Custom 404 pages and a well-designed UI are integral parts of this project.
+
+## Features
+
+- Fetch and display a list of your GitHub repositories.
+- Implement nested routes to show detailed information for selected repositories.
+- Utilize an Error Boundary for error handling.
+- Create custom 404 pages for an improved user experience.
+- Focus on a visually appealing UI and design.
+
+## Tools and Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **React Router**: Routing and nested route handling.
+- **Axios**: Making HTTP requests to the GitHub API.
+- **CSS**: Styling and design for the user interface.
+- **GitHub API**: Retrieving data about your GitHub repositories.
+
+## Usage
+The application displays a list of all your GitHub repositories on the homepage.
+Click on a repository to view detailed information.
+Test the Error Boundary by intentionally causing an error (e.g., change the API endpoint in the code).
+Explore the custom 404 pages by navigating to non-existent routes.
+
+## Acknowledgments
+Big shoutout to team AltSchool Africa and our amazing tutors(Setemi and Ikenna)
+Thanks to the GitHub API for enabling the retrieval of repository data.
+Special gratitude to the React and React Router communities for their invaluable libraries.
+
+UI and design inspiration was just to keep it Simple and Classy .
+
+## Access Links
+**GitHub**
+https://github.com/AdamAdewoye/github-repository-project.git
+
+**Live Link**
+https://github-repository-project.vercel.app/
