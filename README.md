@@ -1,8 +1,8 @@
 # Altschool Africa School of Engineering Second Semester Exam
 
 ## GitHub Portfolio Viewer
+![github-repository-project_README md at main · AdamAdewoye_github-repository-project - Google Chrome 02_11_2023 12_50_07](https://github.com/AdamAdewoye/github-repository-project/assets/95681058/178bedaa-9069-4dae-bad8-e624aa2b0499)
 
-![GitHub Repository Project - Google Chrome 02_11_2023 12_41_31](https://github.com/AdamAdewoye/github-repository-project/assets/95681058/53ae0127-d6c2-4ec8-8b40-99459a6d8758)
 This project is developed for the Altschool Africa School of Engineering Second Semester Exam. It's a React web application that fetches and displays your GitHub repositories. It features a list of all repositories, detailed views of individual repositories, and it implements an Error Boundary to gracefully handle errors. Custom 404 pages and a well-designed UI are integral parts of this project.
 
 ## Features
